@@ -4,7 +4,7 @@ import Fetch from "./Fetch";
 import Menu from "./Menu";
 
 function App() {
-  const url = "http://localhost:1337/api/menus?populate=*";
+  const url = "https://menu-strapi-ak36.onrender.com/api/menus?populate=*";
   const [data, setData] = useState([]);
   const [initialData, setInitialData] = useState([]);
   const [loading, setLoading] = useState(true);

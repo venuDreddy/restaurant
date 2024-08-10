@@ -4,8 +4,9 @@ const MenuItems = ({ data }) => {
       {data.map(({ id, attributes }) => {
         const { name, price, description, image } = attributes;
         const img =
-          "http://localhost:1337" +
+          "https://menu-strapi-ak36.onrender.com" +
           image.data[0].attributes.formats.thumbnail.url;
+          
         return (
           <div className='single-item' key={id}>
             <div className='image-container'>
