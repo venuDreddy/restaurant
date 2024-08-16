@@ -2,15 +2,12 @@ const MenuItems = ({ data }) => {
   return (
     <div className='menu-items-container'>
       {data.map(({ id, attributes }) => {
-        const { name, price, description, image } = attributes;
-        const img =
-          "https://menu-strapi-ak36.onrender.com" +
-          image.data[0].attributes.formats.thumbnail.url;
-          
+        const { name, price, description,img_url} = attributes;
+        console.log(attributes);
         return (
           <div className='single-item' key={id}>
             <div className='image-container'>
-              <img src={img} alt={name} />
+              <img src={img_url} alt={name} />
             </div>
             <div className='item-title'>
               <span className='item-title-name'>{name}</span>
